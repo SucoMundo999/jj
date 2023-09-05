@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A</title>
+  </head>
+  <body>
+    <input class="js-input" placeholder="Insert your name" onkeydown="
+      if (event.key === 'Enter') {
+        displayMessage();
+      }
+    ">
+
+    <button onclick="
+      displayMessage();
+    ">Submit</button>
+
+    <p class="js-message"></p>
+
+    <p class="js-message2"></p>
+    <script>
+
+
+      function displayMessage() {
+        const inputElement = document.querySelector('.js-input');
+        let name = inputElement.value;
+
+        const textElement = document.querySelector('.js-message');
+        const textElement2 = document.querySelector('.js-message2');
+
+        textElement.innerHTML = `Your name is: ${name}.`;
+        
+        if (name === 'Juice wrld' || name === 'Juice Wrld' || name === 'juice wrld') {
+          textElement2.innerHTML = 'Good nigga!';
+        } else {
+          textElement2.innerHTML = '';
+        }
+      }
+    </script>
+  </body>
+</html>
